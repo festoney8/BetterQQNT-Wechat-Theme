@@ -1,9 +1,9 @@
 @media (prefers-color-scheme: light) {
     /* 主题参数 */
     .q-theme-tokens-light {
-        --global-brand_standard: rgb(199, 197, 197) !important;
+        --global-brand_standard: rgb(200, 200, 200);
         --bg_list: rgb(247, 247, 247);
-        --on_bg_text: #999999ff;
+        --on_bg_text: black;
         --font_size_4: 16px;
         --font_size_5: 18px;
         --line_height_5: 24px;
@@ -46,8 +46,8 @@
         background-color: #f7f7f7 !important;
     }
 
-    .viewport-list__inner {
-        background-color: rgb(229, 228, 228) !important;
+    .recent-contact .viewport-list__inner {
+        background-color: rgb(229, 229, 229) !important;
     }
 
     .recent-contact .avatar {
@@ -55,7 +55,7 @@
     }
 
     .list-item {
-        height: 68px !important;
+        height: 65px !important;
     }
 
     .list-item__container {
@@ -63,11 +63,15 @@
     }
 
     #app .recent-contact-item.across-mode.recent-contact-item--selected .list-item__container {
-        background: rgb(199, 197, 197) !important;
+        background: rgb(200, 200, 200) !important;
     }
 
     .across-mode.list-item--selected .list-item__content .list-item__info .list-item__summary {
-        color: var(--on_bg_text) !important;
+        color: #999999ff !important;
+    }
+
+    .list-item .list-item__container .list-item__content .list-item__info .list-item__summary {
+        color: #999999ff !important;
     }
 
     .across-mode.list-item--selected .list-item__content .list-item__title span {
@@ -77,6 +81,10 @@
     /* 聊天窗 */
     #app .panel-header .panel-header__title {
         font-size: min(var(--font_size_5), 20px) !important;
+    }
+
+    .message-container__avatar {
+        border-radius: 2px !important;
     }
 
     /* 文字泡 */
@@ -94,10 +102,15 @@
         color: rgb(87, 107, 149) !important;
     }
 
+    /* 回复和转发 */
     .forward-msg {
         border-radius: 2px !important;
     }
 
+    .reply-element--self,
+    .reply-element--others {
+        color: black !important;
+    }
 
     /* 图片和文件泡 */
     .image-content {
@@ -140,5 +153,22 @@
     .sticker-panel {
         border-radius: 0 !important;
         background: rgb(247, 247, 247) !important;
+    }
+
+    /* 右栏 群公告 群成员列表 */
+    .group-member .viewport-list__inner {
+        background-color: rgb(243, 243, 243) !important;
+    }
+
+    .group-notice .content {
+        color: black !important;
+    }
+
+    .group-user__name .text-ellipsis {
+        color: black !important;
+    }
+
+    .group-user .avatar {
+        border-radius: 0 !important;
     }
 }
