@@ -1,97 +1,144 @@
-/* 设置背景图片与效果 */
-#app::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-image: var(--test-theme-background);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-}
-
-/* 删除背景 */
-.sidebar,
-.tab-container,
-.recent-contact,
-.viewport-list__inner,
-.contact,
-.tab-header,
-.radio-tab,
-.q-collapse-item>.q-collapse-item__header,
-.msg-content-container,
-.normal-file,
-.forward-ops .op-icon,
-.sys-notify,
-.sys-notify-card {
-    background: initial !important;
-}
-
-
-/* 列表条目圆角 */
-.viewport-list__inner {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    padding: 8px;
-}
-
-.list-item {
-    border-radius: 16px;
-}
-
-.list-item:hover {
-    background-color: rgba(0, 0, 0, 0.1) !important;
-}
-
-.group-chat {
-    display: initial !important;
-}
-
-.chat-msg-area {
-    overflow: initial !important;
-}
-
-.chat-msg-area .list-wrap {
-    padding-bottom: calc(150px + 20px);
-}
-
-.chat-input-area {
-    border-radius: 16px;
-    margin: 20px;
-    top: calc(var(--inputAreaHeight) * -1 + -40px);
-    z-index: 9;
-}
-
-
-/* 浅色模式 */
 @media (prefers-color-scheme: light) {
-
-    /* 添加模糊 */
-    .sidebar,
-    .msg-content-container,
-    .normal-file,
-    .forward-ops .op-icon,
-    .radio-tab,
-    .sys-notify-card,
-    .chat-input-area {
-        backdrop-filter: brightness(90%) saturate(120%) blur(8px);
+    /* 主题参数 */
+    .q-theme-tokens-light {
+        --global-brand_standard: rgb(199, 197, 197) !important;
+        --bg_list: rgb(247, 247, 247);
+        --on_bg_text: #999999ff;
+        --font_size_4: 16px;
+        --font_size_5: 18px;
+        --line_height_5: 24px;
+        --overlay-top: #00000000;
     }
-}
+
+    /* 左边栏 头像 */
+    .user-avatar-container .user-avatar--clip {
+        clip-path: unset !important;
+    }
+
+    .user-avatar-container .avatar {
+        border-radius: 0;
+    }
+
+    /* 左边栏 上部 */
+    .sidebar {
+        background-color: rgb(46, 46, 46) !important;
+    }
+
+    .tab-item-mask, .tab-item-img-mask {
+        background-color: rgb(7, 193, 96) !important;
+    }
+
+    .tab-item-img-normal {
+        filter: invert(0.5);
+    }
+
+    /* 左边栏 下部 */
+    .sidebar .icon-item {
+        filter: invert(0.5);
+    }
+
+    /* 信息列表 */
+    .search .search-input {
+        background: rgb(226, 226, 226) !important;
+    }
+
+    .recent-contact {
+        background-color: #f7f7f7 !important;
+    }
+
+    .viewport-list__inner {
+        background-color: rgb(229, 228, 228) !important;
+    }
+
+    .recent-contact .avatar {
+        border-radius: 3px !important;
+    }
+
+    .list-item {
+        height: 68px !important;
+    }
+
+    .list-item__container {
+        background: #00000000 !important;
+    }
+
+    #app .recent-contact-item.across-mode.recent-contact-item--selected .list-item__container {
+        background: rgb(199, 197, 197) !important;
+    }
+
+    .across-mode.list-item--selected .list-item__content .list-item__info .list-item__summary {
+        color: var(--on_bg_text) !important;
+    }
+
+    .across-mode.list-item--selected .list-item__content .list-item__title span {
+        color: black !important;
+    }
+
+    /* 聊天窗 */
+    #app .panel-header .panel-header__title {
+        font-size: min(var(--font_size_5), 20px) !important;
+    }
+
+    /* 文字泡 */
+    .msg-content-container.container--self {
+        background-color: rgb(149, 236, 105) !important;
+        color: black !important;
+        border-radius: 2px !important;
+    }
+
+    .msg-content-container.container--others {
+        border-radius: 2px !important;
+    }
+
+    .text-element .text-link {
+        color: rgb(87, 107, 149) !important;
+    }
+
+    .forward-msg {
+        border-radius: 2px !important;
+    }
 
 
-/* 深色模式 */
-@media (prefers-color-scheme: dark) {
+    /* 图片和文件泡 */
+    .image-content {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        border-radius: 2px !important;
+    }
 
-    /* 添加模糊 */
-    .sidebar,
-    .msg-content-container,
-    .normal-file,
-    .forward-ops .op-icon,
-    .radio-tab,
-    .sys-notify-card,
-    .chat-input-area {
-        backdrop-filter: brightness(110%) saturate(120%) blur(8px);
+    .message-container--self.normal-file {
+        background-color: rgb(149, 236, 105) !important;
+        border-radius: 2px !important;
+        color: black !important;
+    }
+
+    /* 文字泡选中 */
+    .message-container.message-container--active {
+        background-color: rgb(0 0 0 / 10%) !important;
+    }
+
+    /* 编辑栏 */
+    #app .ck-content {
+        font-size: var(--font_size_4) !important;
+        line-height: var(--line_height_5) !important;
+    }
+
+    /* 发送按钮 */
+    .operation .send-btn-wrap {
+        background-color: rgb(233, 233, 233) !important;
+    }
+
+    .operation .send--disabled {
+        opacity: 1;
+    }
+
+    .operation .send {
+        font-size: 1.25em !important;
+        color: rgb(7, 193, 96) !important;
+    }
+
+    /* popup */
+    .sticker-panel {
+        border-radius: 0 !important;
+        background: rgb(247, 247, 247) !important;
     }
 }

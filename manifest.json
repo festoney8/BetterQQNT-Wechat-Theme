@@ -1,14 +1,14 @@
 {
     "manifest_version": 1,
     "type": "theme",
-    "name": "测试主题",
-    "slug": "test_theme",
-    "description": "测试用的主题",
-    "version": "0.1.2",
+    "name": "QQNT微信风格主题",
+    "slug": "wechat_theme",
+    "description": "QQNT高仿微信主题",
+    "version": "0.0.1",
     "author": [
         {
-            "name": "沫烬染",
-            "link": "https://github.com/mo-jinran"
+            "name": "festoney8",
+            "link": "https://github.com/festoney8"
         }
     ],
     "injects": {

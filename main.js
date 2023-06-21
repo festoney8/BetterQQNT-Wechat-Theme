@@ -23,7 +23,7 @@ function updateStyle(webContents) {
             return;
         }
         webContents.send(
-            "betterQQNT.test_theme.updateStyle",
+            "betterQQNT.wechat_theme.updateStyle",
             data
         );
     });
@@ -35,13 +35,13 @@ function watchCSSChange(webContents) {
     const filepath = path.join(__dirname, "style.css");
     fs.watch(filepath, "utf-8", debounce(() => {
         updateStyle(webContents);
-    }, 100));
+    }, 1000));
 }
 
 
 function onLoad(plugin) {
     ipcMain.on(
-        "betterQQNT.test_theme.rendererReady",
+        "betterQQNT.wechat_theme.rendererReady",
         (event, message) => {
             const window = BrowserWindow.fromWebContents(event.sender);
             updateStyle(window.webContents);
