@@ -131,6 +131,7 @@
         border-radius: var(--wechat-text-radius) !important;
     }
 
+    .message-content__wrapper,
     .message-container--self.normal-file {
         background-color: white !important;
         border-radius: var(--wechat-text-radius) !important;
