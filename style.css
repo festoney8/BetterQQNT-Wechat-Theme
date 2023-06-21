@@ -74,6 +74,10 @@
         color: #999999ff !important;
     }
 
+    .list-item .list-item__container .list-item__content .list-item__info .list-item__title .secondary-info {
+        color: #999999ff !important;
+    }
+
     .across-mode.list-item--selected .list-item__content .list-item__title span {
         color: black !important;
     }
