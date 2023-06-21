@@ -1,6 +1,6 @@
 # wechat-theme
 
-[BetterQQNT](https://github.com/mo-jinran/BetterQQNT) 插件，高仿微信风格的QQNT主题
+[BetterQQNT](https://github.com/mo-jinran/BetterQQNT) 插件，高仿微信风格的QQNT主题，~~可以用于QQ聊天摸鱼时伪装微信办公~~
 
 ## 介绍
 
