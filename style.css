@@ -11,12 +11,13 @@
     }
 
     /* 左边栏 头像 */
-    .user-avatar-container .user-avatar--clip {
-        clip-path: unset !important;
+    .user-avatar-container .avatar {
+        border-radius: unset !important;
     }
 
-    .user-avatar-container .avatar {
-        border-radius: 0;
+    .user-avatar-container .user-avatar--clip {
+        -webkit-clip-path: unset !important;
+        clip-path: unset !important;
     }
 
     /* 左边栏 上部 */
@@ -89,6 +90,11 @@
 
     .message-container__avatar {
         border-radius: 2px !important;
+    }
+
+    .user-name .text-ellipsis,
+    .message__timestamp {
+        color: #999999ff !important;
     }
 
     /* 文字泡 */
