@@ -8,6 +8,8 @@
         --font_size_5: 18px;
         --line_height_5: 24px;
         --overlay-top: #00000000;
+        /* 全局文字泡radius */
+        --wechat-text-radius: 4px;
     }
 
     /* 左边栏 头像 */
@@ -92,7 +94,9 @@
         border-radius: 2px !important;
     }
 
+    /* 群聊用户名 群聊时间 撤回通知 */
     .user-name .text-ellipsis,
+    .gray-tip-message,
     .message__timestamp {
         color: #999999ff !important;
     }
@@ -101,11 +105,11 @@
     .msg-content-container.container--self {
         background-color: rgb(149, 236, 105) !important;
         color: black !important;
-        border-radius: 2px !important;
+        border-radius: var(--wechat-text-radius) !important;
     }
 
     .msg-content-container.container--others {
-        border-radius: 2px !important;
+        border-radius: var(--wechat-text-radius) !important;
     }
 
     .text-element .text-link {
@@ -114,7 +118,7 @@
 
     /* 回复和转发 */
     .forward-msg {
-        border-radius: 2px !important;
+        border-radius: var(--wechat-text-radius) !important;
     }
 
     .reply-element--self,
@@ -124,14 +128,17 @@
 
     /* 图片和文件泡 */
     .image-content {
-        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
-        border-radius: 2px !important;
+        border-radius: var(--wechat-text-radius) !important;
     }
 
     .message-container--self.normal-file {
-        background-color: rgb(149, 236, 105) !important;
-        border-radius: 2px !important;
+        background-color: white !important;
+        border-radius: var(--wechat-text-radius) !important;
         color: black !important;
+    }
+
+    .msg-preview {
+        border-radius: var(--wechat-text-radius) !important;
     }
 
     /* 文字泡选中 */
@@ -180,5 +187,28 @@
 
     .group-user .avatar {
         border-radius: 0 !important;
+    }
+
+    /* 联系人 */
+    .tab-container .contact {
+        background-color: rgb(247, 247, 247) !important;
+    }
+
+    .contact .avatar {
+        border-radius: 2px !important;
+    }
+
+    .avatar--offline::after {
+        border-radius: unset !important;
+    }
+
+    .contact .tab-header,
+    .contact .q-collapse-item__header {
+        background-color: rgb(247, 247, 247) !important;
+    }
+
+    /* 好友通知 群通知 */
+    .sys-notify .avatar {
+        border-radius: 2px !important;
     }
 }
