@@ -35,7 +35,7 @@ function watchCSSChange(webContents) {
     const filepath = path.join(__dirname, "style.css");
     fs.watch(filepath, "utf-8", debounce(() => {
         updateStyle(webContents);
-    }, 1000));
+    }, 100));
 }
 
 
