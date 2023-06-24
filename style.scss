@@ -209,6 +209,10 @@
                     font-size: 1.25em !important;
                     color: rgb(7, 193, 96) !important;
                 }
+
+                & .close {
+                    display: none !important;
+                }
             }
 
             // 表情popup

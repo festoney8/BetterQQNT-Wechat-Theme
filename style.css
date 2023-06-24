@@ -133,6 +133,9 @@
     font-size: 1.25em !important;
     color: rgb(7, 193, 96) !important;
   }
+  .aio .chat-input-area .operation .close {
+    display: none !important;
+  }
   .aio .chat-input-area .sticker-panel {
     border-radius: 0 !important;
     background: rgb(247, 247, 247) !important;
