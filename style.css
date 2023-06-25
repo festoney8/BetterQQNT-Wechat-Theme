@@ -3,20 +3,27 @@
     --brand_standard: rgb(26, 173, 25);
     --text-brand: black;
   }
-  .sidebar {
+  .sidebar,
+  .sidebar-nav {
     background: rgb(46, 46, 46) !important;
     width: 55px !important;
   }
-  .sidebar .tab-item-mask, .sidebar .tab-item-img-mask {
+  .sidebar .tab-item-mask, .sidebar .tab-item-img-mask,
+  .sidebar-nav .tab-item-mask,
+  .sidebar-nav .tab-item-img-mask {
     background-color: rgb(7, 193, 96) !important;
   }
-  .sidebar .tab-item-img-normal, .sidebar .icon-item {
+  .sidebar .tab-item-img-normal, .sidebar .icon-item,
+  .sidebar-nav .tab-item-img-normal,
+  .sidebar-nav .icon-item {
     filter: invert(0.5);
   }
-  .sidebar .user-avatar-container .avatar {
+  .sidebar .user-avatar-container .avatar,
+  .sidebar-nav .user-avatar-container .avatar {
     border-radius: unset !important;
   }
-  .sidebar .user-avatar-container .user-avatar--clip {
+  .sidebar .user-avatar-container .user-avatar--clip,
+  .sidebar-nav .user-avatar-container .user-avatar--clip {
     -webkit-clip-path: unset !important;
     clip-path: unset !important;
   }
