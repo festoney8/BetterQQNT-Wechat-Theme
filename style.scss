@@ -52,6 +52,10 @@
 
         & .avatar {
             border-radius: 3px !important;
+            // 移除群助手和我的手机icon外圆形
+            &.avatar-sys::before {
+                border-radius: unset !important;
+            }
         }
 
         & .list-item {
@@ -179,7 +183,7 @@
                 color: white !important;
 
                 background: rgb(218, 218, 218) !important;
-                padding: 2px 5px 2px 5px;
+                padding: 3px 5px 2px 5px;
                 border-radius: 2px !important;
             }
 
@@ -276,6 +280,10 @@
 
         & .avatar {
             border-radius: 2px !important;
+
+            &.avatar-sys::before {
+                border-radius: unset !important;
+            }
         }
 
         & .avatar--offline::after {

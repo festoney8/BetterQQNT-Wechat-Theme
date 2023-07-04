@@ -39,6 +39,9 @@
   .recent-contact .avatar {
     border-radius: 3px !important;
   }
+  .recent-contact .avatar.avatar-sys::before {
+    border-radius: unset !important;
+  }
   .recent-contact .list-item {
     height: 65px !important;
   }
@@ -119,7 +122,7 @@
     margin-right: auto !important;
     color: white !important;
     background: rgb(218, 218, 218) !important;
-    padding: 2px 5px 2px 5px;
+    padding: 3px 5px 2px 5px;
     border-radius: 2px !important;
   }
   .aio .chat-msg-area .q-notification {
@@ -178,6 +181,9 @@
   }
   .contact .avatar {
     border-radius: 2px !important;
+  }
+  .contact .avatar.avatar-sys::before {
+    border-radius: unset !important;
   }
   .contact .avatar--offline::after {
     border-radius: unset !important;
