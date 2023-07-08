@@ -84,12 +84,12 @@
   .aio .chat-msg-area .message-container__avatar {
     border-radius: 2px !important;
   }
-  .aio .chat-msg-area .msg-content-container.container--self {
+  .aio .chat-msg-area .msg-content-container.container--self:not(:has(.market-face-element, canvas)) {
     border-radius: 4px !important;
     background-color: rgb(149, 236, 105) !important;
     color: black !important;
   }
-  .aio .chat-msg-area .msg-content-container.container--others {
+  .aio .chat-msg-area .msg-content-container.container--others:not(:has(.market-face-element, canvas)) {
     border-radius: 4px !important;
   }
   .aio .chat-msg-area .msg-content-container .text-element .text-link {
@@ -105,7 +105,13 @@
   .aio .chat-msg-area .msg-content-container .image-content {
     border-radius: 4px !important;
   }
-  .aio .chat-msg-area .message-content__wrapper, .aio .chat-msg-area .message-container--self.normal-file {
+  .aio .chat-msg-area .ptt-element .q-icon {
+    color: rgb(149, 236, 105) !important;
+  }
+  .aio .chat-msg-area .ptt-element .ptt-element__duration {
+    color: black !important;
+  }
+  .aio .chat-msg-area .message-container--self.normal-file {
     background-color: white !important;
     border-radius: 4px !important;
     color: black !important;

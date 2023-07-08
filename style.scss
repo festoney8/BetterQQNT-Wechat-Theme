@@ -124,13 +124,14 @@
 
             // 文字泡
             & .msg-content-container {
-                &.container--self {
+                // 商店表情包 小程序背景保持透明
+                &.container--self:not(:has(.market-face-element, canvas)) {
                     border-radius: $wechat-text-radius !important;
                     background-color: $wechat-green !important;
                     color: black !important;
                 }
 
-                &.container--others {
+                &.container--others:not(:has(.market-face-element, canvas)) {
                     border-radius: $wechat-text-radius !important;
                 }
 
@@ -157,8 +158,18 @@
 
             }
 
+            // 语音
+            & .ptt-element {
+                & .q-icon {
+                    color: $wechat-green !important;
+                }
+
+                & .ptt-element__duration {
+                    color: black !important;
+                }
+            }
+
             // 文件
-            & .message-content__wrapper,
             & .message-container--self.normal-file {
                 background-color: white !important;
                 border-radius: $wechat-text-radius !important;
