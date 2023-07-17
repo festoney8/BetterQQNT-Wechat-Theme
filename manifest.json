@@ -1,15 +1,24 @@
 {
-    "manifest_version": 1,
+    "manifest_version": 2,
     "type": "theme",
     "name": "QQNT微信风格主题",
     "slug": "wechat_theme",
-    "description": "QQNT高仿微信主题",
-    "version": "0.0.1",
+    "description": "让你的QQ变成微信的样子!",
+    "version": "0.1.0",
+    "thumbnail": "./image/icon.png",
     "author": [
         {
             "name": "festoney8",
             "link": "https://github.com/festoney8"
         }
+    ],
+    "repository": {
+        "repo": "festoney8/LiteLoaderQQNT-Wechat-Theme",
+        "branch": "main"
+    },
+    "platform": [
+        "win32",
+        "darwin"
     ],
     "injects": {
         "renderer": "./renderer.js",

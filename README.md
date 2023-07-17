@@ -12,7 +12,7 @@
 
 ## 截图
 
-![img.png](img.png)
+![img.png](image/img.png)
 
 ## 使用方法
 
