@@ -10,6 +10,11 @@
 - 因为模仿了微信，所以本主题很难看 :(
 - 在微信和QQ同时使用时极易出现信息发错软件的情况，请注意甄别哪个是QQ哪个是微信
 
+## 版本适配
+
+- main 分支适配到 QQNT 9.9.0-14619
+- QQNT 9.9.1 及以上请使用 [**V3 分支**](https://github.com/festoney8/LiteLoaderQQNT-Telegram-Theme/tree/v3)
+
 ## 截图
 
 ![img.png](image/img.png)
