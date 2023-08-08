@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "type": "theme",
     "name": "QQNT微信风格主题",
     "slug": "wechat_theme",
@@ -14,7 +14,7 @@
     ],
     "repository": {
         "repo": "festoney8/LiteLoaderQQNT-Wechat-Theme",
-        "branch": "main"
+        "branch": "v3"
     },
     "platform": [
         "win32",
