@@ -2,7 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const { BrowserWindow, ipcMain } = require("electron");
 
-
 // 防抖函数
 function debounce(fn, time) {
     let timer = null;
@@ -11,9 +10,8 @@ function debounce(fn, time) {
         timer = setTimeout(() => {
             fn.apply(this, args);
         }, time);
-    }
+    };
 }
-
 
 // 更新样式
 function updateStyle(webContents) {
@@ -22,45 +20,34 @@ function updateStyle(webContents) {
         if (err) {
             return;
         }
-        webContents.send(
-            "betterQQNT.wechat_theme.updateStyle",
-            data
-        );
+        webContents.send("LiteLoader.wechat_theme.updateStyle", data);
     });
 }
-
 
 // 监听CSS修改-开发时候用的
 function watchCSSChange(webContents) {
     const filepath = path.join(__dirname, "style.css");
-    fs.watch(filepath, "utf-8", debounce(() => {
-        updateStyle(webContents);
-    }, 100));
-}
-
-
-function onLoad(plugin) {
-    ipcMain.on(
-        "betterQQNT.wechat_theme.rendererReady",
-        (event, message) => {
-            const window = BrowserWindow.fromWebContents(event.sender);
-            updateStyle(window.webContents);
-        }
+    fs.watch(
+        filepath,
+        "utf-8",
+        debounce(() => {
+            updateStyle(webContents);
+        }, 100)
     );
 }
 
-
-function onBrowserWindowCreated(window, plugin) {
-    window.on("ready-to-show", () => {
-        const url = window.webContents.getURL();
-        if (url.includes("app://./renderer/index.html")) {
-            watchCSSChange(window.webContents);
-        }
+function onLoad(plugin) {
+    ipcMain.on("LiteLoader.wechat_theme.rendererReady", (event, message) => {
+        const window = BrowserWindow.fromWebContents(event.sender);
+        updateStyle(window.webContents);
     });
 }
 
+function onBrowserWindowCreated(window, plugin) {
+    watchCSSChange(window.webContents);
+}
 
 module.exports = {
     onLoad,
     onBrowserWindowCreated
-}
+};
