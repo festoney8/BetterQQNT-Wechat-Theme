@@ -270,4 +270,12 @@
     .contact .viewport-list__inner .across-mode.list-item--selected .list-item__content .list-item__title span {
         color: #000 !important
     }
+
+    .q-context-menu-item:has(i.q-icon>svg>path[d^="M6.00031"]) {
+        color: green
+    }
+
+    .q-context-menu-item:has(i.q-icon>svg>path[d^="M2.14649"]) {
+        color: red
+    }
 }

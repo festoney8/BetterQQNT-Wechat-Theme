@@ -313,4 +313,14 @@
             }
         }
     }
+
+    // 右键菜单高亮回复和撤回，防止误触
+    .q-context-menu-item {
+        &:has(i.q-icon > svg > path[d^="M6.00031"]) {
+            color: green;
+        }
+        &:has(i.q-icon > svg > path[d^="M2.14649"]) {
+            color: red;
+        }
+    }
 }
