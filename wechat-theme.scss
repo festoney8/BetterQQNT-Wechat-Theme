@@ -140,6 +140,11 @@
                     color: rgb(87, 107, 149) !important;
                 }
 
+                // at用户
+                .text-element--at {
+                    color: black !important;
+                }
+
                 // 转发
                 .forward-msg {
                     border-radius: $wechat-text-radius !important;
@@ -184,6 +189,12 @@
                 color: #999999ff !important;
             }
 
+            // 用户名tag
+            & .q-tag {
+                background-color: rgba(26, 173, 25, 0.15);
+                color: rgb(26, 173, 25);
+            }
+
             // 群聊时间 撤回通知
             & .message__timestamp,
             & .gray-tip-content {
@@ -214,6 +225,9 @@
             & .operation {
                 & .send-btn-wrap {
                     background-color: rgb(233, 233, 233) !important;
+                    & .send-setting i.q-icon {
+                        color: rgb(7, 193, 96);
+                    }
                 }
 
                 & .send--disabled {

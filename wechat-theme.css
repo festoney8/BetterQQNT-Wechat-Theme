@@ -125,6 +125,10 @@
         color: #576b95 !important
     }
 
+    .aio .chat-msg-area .msg-content-container .text-element--at {
+        color: #000 !important
+    }
+
     .aio .chat-msg-area .msg-content-container .forward-msg {
         border-radius: 4px !important
     }
@@ -160,6 +164,11 @@
         color: #999 !important
     }
 
+    .aio .chat-msg-area .q-tag {
+        background-color: rgba(26, 173, 25, .15);
+        color: #1aad19
+    }
+
     .aio .chat-msg-area .message__timestamp,
     .aio .chat-msg-area .gray-tip-content {
         width: -moz-fit-content;
@@ -184,6 +193,10 @@
 
     .aio .chat-input-area .operation .send-btn-wrap {
         background-color: #e9e9e9 !important
+    }
+
+    .aio .chat-input-area .operation .send-btn-wrap .send-setting i.q-icon {
+        color: #07c160
     }
 
     .aio .chat-input-area .operation .send--disabled {
