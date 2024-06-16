@@ -9,7 +9,7 @@
     }
 
     // 左边栏
-    .sidebar,
+    div.sidebar,
     .sidebar-nav {
         background: rgb(46, 46, 46) !important;
         width: 55px !important;
@@ -109,8 +109,14 @@
             & .panel-header__title {
                 font-size: min(var(--font_size_5), 20px) !important;
                 // 去除vip颜色
-                #chatHeaderContactName {
+                #chatHeaderContactName,
+                .chat-header__contact-name .text-ellipsis {
                     color: black !important;
+                }
+            }
+            & .panel-header__action {
+                & .bar-icon:not(:hover) .q-icon {
+                    color: rgb(80, 80, 80);
                 }
             }
         }
@@ -189,10 +195,16 @@
                 color: #999999ff !important;
             }
 
-            // 用户名tag
+            // 用户名tag 隐藏等级，保留自定义tag
             & .q-tag {
                 background-color: rgba(26, 173, 25, 0.15);
                 color: rgb(26, 173, 25);
+                & .level {
+                    display: none;
+                }
+                &.q-tag--grey {
+                    display: none;
+                }
             }
 
             // 群聊时间 撤回通知
@@ -222,11 +234,24 @@
 
         // 编辑栏
         & .chat-input-area {
+            // 聊天工具
+            & .chat-func-bar {
+                & .bar-icon:not(:hover) .q-icon {
+                    color: rgb(80, 80, 80);
+                }
+            }
             & .operation {
                 & .send-btn-wrap {
                     background-color: rgb(233, 233, 233) !important;
                     & .send-setting i.q-icon {
                         color: rgb(7, 193, 96);
+                    }
+                    & .send {
+                        width: 100px;
+                    }
+                    & .divider,
+                    & .send-setting__wrapper {
+                        display: none;
                     }
                 }
 
@@ -261,8 +286,14 @@
                 color: black !important;
             }
 
-            & .group-user .avatar {
-                border-radius: unset !important;
+            & .group-user {
+                & .avatar {
+                    border-radius: unset !important;
+                }
+                & .q-tag.q-tag--blue {
+                    color: rgb(26, 173, 25);
+                    background-color: rgba(26, 173, 25, 0.15);
+                }
             }
         }
 
@@ -328,13 +359,18 @@
         }
     }
 
-    // 右键菜单高亮回复和撤回，防止误触
+    // 右键菜单高亮回复和撤回
     .q-context-menu-item {
-        &:has(i.q-icon > svg > path[d^="M6.00031"]) {
+        &:has(.q-icon path[d^="M6.00031"], .q-icon use[*|href$="quote_24"]) {
             color: green;
         }
-        &:has(i.q-icon > svg > path[d^="M2.14649"]) {
+        &:has(.q-icon path[d^="M2.14649"], .q-icon use[*|href$="recall_24"]) {
             color: red;
         }
+    }
+
+    // 右上角按钮
+    .window-control-area > div {
+        color: rgb(80, 80, 80);
     }
 }
