@@ -12,13 +12,13 @@
     #app {
         // 左边栏
         div.sidebar,
-        nav.sidebar-nav {
-            background: rgb(46, 46, 46);
+        .sidebar-nav {
+            background: #2e2e2e;
             width: 55px;
             // 边栏按钮
             .tab-item-mask,
             .tab-item-img-mask {
-                background-color: rgb(7, 193, 96);
+                background-color: #07c160;
             }
 
             .tab-item-img-normal,
@@ -42,17 +42,17 @@
 
         // 信息列表栏
         .recent-contact {
-            background-color: #f7f7f7;
+            background-color: #f7f7f7 !important;
 
             .search .search-input {
-                background: rgb(226, 226, 226);
+                background: #e2e2e2;
             }
             .contact-top-bar .top-bar__adder {
-                background: rgb(226, 226, 226);
+                background: #e2e2e2;
             }
 
             .viewport-list__inner {
-                background-color: rgb(229, 229, 229);
+                background-color: #e5e5e5 !important;
             }
 
             .avatar {
@@ -76,7 +76,7 @@
             }
             // 选中颜色
             .recent-contact-item.recent-contact-item--selected .list-item__container.item-dragging-over {
-                background: rgb(196, 196, 196) !important;
+                background: #c4c4c4 !important;
             }
 
             // 文字颜色（会员名，普通名，聊天时间，聊天summary）
@@ -111,10 +111,10 @@
 
         // 聊天栏
         .aio {
-            background: rgb(245, 245, 245);
+            background: #f5f5f5;
             // header
             .panel-header.chat-header {
-                background: rgb(245, 245, 245);
+                background: #f5f5f5;
 
                 .panel-header__title {
                     font-size: min(var(--font_size_5), 20px) !important;
@@ -128,7 +128,7 @@
                 }
                 .panel-header__action {
                     .bar-icon:not(:hover) .q-icon {
-                        color: rgb(80, 80, 80);
+                        color: #505050;
                     }
                 }
             }
@@ -155,7 +155,7 @@
 
                     // 超链接
                     .text-element .text-link {
-                        color: rgb(87, 107, 149);
+                        color: #576b95;
                     }
 
                     // at用户
@@ -210,8 +210,8 @@
 
                 // 用户名tag 隐藏等级，保留自定义tag
                 .q-tag {
-                    background-color: rgba(26, 173, 25, 0.15);
-                    color: rgb(26, 173, 25);
+                    background-color: #1aad1926;
+                    color: #1aad19;
                     .level {
                         display: none;
                     }
@@ -228,9 +228,12 @@
                     margin-right: auto;
                     color: white;
 
-                    background: rgb(218, 218, 218);
+                    background: #dadada;
                     padding: 3px 5px 2px 5px;
                     border-radius: 2px;
+                }
+                .gray-tip-action {
+                    --text_link: #576b95;
                 }
 
                 // 新老消息提示
@@ -239,7 +242,7 @@
                     box-shadow: 0 2px 4px #0000000f;
 
                     &.theme-default .content {
-                        color: rgb(9, 187, 7);
+                        color: #09bb07;
                         font-size: 14px;
                     }
                 }
@@ -250,14 +253,14 @@
                 // 聊天工具
                 .chat-func-bar {
                     .bar-icon:not(:hover) .q-icon {
-                        color: rgb(80, 80, 80);
+                        color: #505050;
                     }
                 }
                 .operation {
                     .send-btn-wrap {
-                        background-color: rgb(233, 233, 233);
+                        background-color: #e9e9e9;
                         .send-setting i.q-icon {
-                            color: rgb(7, 193, 96);
+                            color: #07c160;
                         }
                         .send {
                             width: 100px;
@@ -274,7 +277,7 @@
 
                     .send {
                         font-size: 1.25em;
-                        color: rgb(7, 193, 96);
+                        color: #07c160;
                     }
 
                     .close {
@@ -285,7 +288,7 @@
                 // 表情popup
                 .sticker-panel {
                     border-radius: 0;
-                    background: rgb(247, 247, 247);
+                    background: #f7f7f7;
                 }
             }
 
@@ -304,8 +307,8 @@
                         border-radius: unset;
                     }
                     .q-tag.q-tag--blue {
-                        color: rgb(26, 173, 25);
-                        background-color: rgba(26, 173, 25, 0.15);
+                        color: #1aad19;
+                        background-color: #1aad1926;
                     }
                 }
             }
@@ -340,13 +343,10 @@
                 }
             }
         }
-        [role="button"] {
-            cursor: pointer;
-        }
 
         // 联系人栏目
         .contact {
-            background-color: rgb(247, 247, 247);
+            background-color: #f7f7f7;
 
             .avatar {
                 border-radius: 2px;
@@ -362,12 +362,12 @@
 
             .tab-header,
             .q-collapse-item__header {
-                background-color: rgb(247, 247, 247);
+                background-color: #f7f7f7;
             }
 
             // 选中颜色
             .viewport-list__inner .across-mode.list-item--selected {
-                background: rgb(196, 196, 196);
+                background: #c4c4c4 !important;
 
                 .list-item__content .list-item__title span {
                     color: black;
@@ -377,7 +377,7 @@
 
         // 右上角按钮
         .window-control-area > div {
-            color: rgb(80, 80, 80);
+            color: #505050;
         }
     }
 
@@ -392,5 +392,11 @@
         &:has(.q-icon path[d^="M2.14649"], .q-icon use[*|href$="recall_24"]) {
             color: red;
         }
+    }
+
+    // btn指针样式
+    [role="button"],
+    button {
+        cursor: pointer;
     }
 }
