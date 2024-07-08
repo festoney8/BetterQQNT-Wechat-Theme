@@ -3,9 +3,10 @@
     $wechat-green: #95ec69;
 
     // 主题色
-    .q-theme-tokens-light:has(.message-panel) {
+    body:has(.message-panel) {
         --brand_standard: #1aad19;
         --text-brand: black;
+        --nt_brand_standard_2_overlay_hover_brand_2_mix: #38cd7f;
     }
 
     // 左边栏
@@ -45,6 +46,9 @@
         .search .search-input {
             background: rgb(226, 226, 226) !important;
         }
+        .contact-top-bar .top-bar__adder {
+            background: rgb(226, 226, 226) !important;
+        }
 
         .viewport-list__inner {
             background-color: rgb(229, 229, 229) !important;
@@ -65,9 +69,12 @@
         .list-item__container {
             background: #00000000 !important;
         }
-
+        // 置顶颜色
+        .recent-contact-item.recent-contact-item--top .list-item__container.item-dragging-over {
+            background: #dbdbdb !important;
+        }
         // 选中颜色
-        .recent-contact-item.across-mode.recent-contact-item--selected .list-item__container.item-dragging-over {
+        .recent-contact-item.recent-contact-item--selected .list-item__container.item-dragging-over {
             background: rgb(196, 196, 196) !important;
         }
 
@@ -81,6 +88,8 @@
                     .text-ellipsis,
                     .text-ellipsis.vip-name {
                         color: black !important;
+                        -webkit-text-fill-color: unset !important;
+                        background: unset !important;
                     }
                 }
 
@@ -112,6 +121,8 @@
                 #chatHeaderContactName,
                 .chat-header__contact-name .text-ellipsis {
                     color: black !important;
+                    -webkit-text-fill-color: unset !important;
+                    background: unset !important;
                 }
             }
             .panel-header__action {
@@ -157,8 +168,7 @@
                 }
 
                 // 回复
-                .reply-element--self,
-                .reply-element--others {
+                .reply-element {
                     color: black !important;
                 }
 
@@ -326,6 +336,9 @@
                 border-radius: 5px !important;
             }
         }
+    }
+    [role="button"] {
+        cursor: pointer;
     }
 
     // 联系人栏目
