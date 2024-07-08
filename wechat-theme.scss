@@ -9,370 +9,380 @@
         --nt_brand_standard_2_overlay_hover_brand_2_mix: #38cd7f;
     }
 
-    // 左边栏
-    .sidebar,
-    .sidebar-nav {
-        background: rgb(46, 46, 46) !important;
-        width: 55px !important;
-        // 边栏按钮
-        .tab-item-mask,
-        .tab-item-img-mask {
-            background-color: rgb(7, 193, 96) !important;
+    #app {
+        // 左边栏
+        div.sidebar,
+        nav.sidebar-nav {
+            background: rgb(46, 46, 46);
+            width: 55px;
+            // 边栏按钮
+            .tab-item-mask,
+            .tab-item-img-mask {
+                background-color: rgb(7, 193, 96);
+            }
+
+            .tab-item-img-normal,
+            .icon-item {
+                filter: invert(0.5);
+            }
+
+            // 头像
+            .user-avatar-container {
+                .avatar {
+                    border-radius: unset;
+                }
+
+                // 头像轮廓图形
+                .user-avatar--clip {
+                    -webkit-clip-path: unset;
+                    clip-path: unset;
+                }
+            }
         }
 
-        .tab-item-img-normal,
-        .icon-item {
-            filter: invert(0.5);
-        }
+        // 信息列表栏
+        .recent-contact {
+            background-color: #f7f7f7;
 
-        // 头像
-        .user-avatar-container {
+            .search .search-input {
+                background: rgb(226, 226, 226);
+            }
+            .contact-top-bar .top-bar__adder {
+                background: rgb(226, 226, 226);
+            }
+
+            .viewport-list__inner {
+                background-color: rgb(229, 229, 229);
+            }
+
             .avatar {
-                border-radius: unset !important;
+                border-radius: 3px;
+                // 移除群助手和我的手机icon外圆形
+                &.avatar-sys::before {
+                    border-radius: unset;
+                }
             }
 
-            // 头像轮廓图形
-            .user-avatar--clip {
-                -webkit-clip-path: unset !important;
-                clip-path: unset !important;
+            .list-item {
+                height: 65px;
+            }
+
+            .list-item__container {
+                background: #00000000;
+            }
+            // 置顶颜色
+            .recent-contact-item.recent-contact-item--top .list-item__container.item-dragging-over {
+                background: #dbdbdb;
+            }
+            // 选中颜色
+            .recent-contact-item.recent-contact-item--selected .list-item__container.item-dragging-over {
+                background: rgb(196, 196, 196) !important;
+            }
+
+            // 文字颜色（会员名，普通名，聊天时间，聊天summary）
+            .across-mode.list-item,
+            .across-mode.list-item--selected {
+                .list-item__content {
+                    .list-item__title .main-info {
+                        // 普通ID, 会员ID, 群名
+                        span,
+                        .text-ellipsis,
+                        .text-ellipsis.vip-name {
+                            color: black !important;
+                            -webkit-text-fill-color: unset !important;
+                            background: unset !important;
+                        }
+                    }
+
+                    .secondary-info.text-ellipsis span {
+                        color: #999999ff;
+                    }
+
+                    .list-item__info .list-item__summary {
+                        color: #999999ff;
+
+                        .q-icon {
+                            color: #999999ff;
+                        }
+                    }
+                }
             }
         }
-    }
 
-    // 信息列表栏
-    .recent-contact {
-        background-color: #f7f7f7 !important;
+        // 聊天栏
+        .aio {
+            background: rgb(245, 245, 245);
+            // header
+            .panel-header.chat-header {
+                background: rgb(245, 245, 245);
 
-        .search .search-input {
-            background: rgb(226, 226, 226) !important;
-        }
-        .contact-top-bar .top-bar__adder {
-            background: rgb(226, 226, 226) !important;
-        }
-
-        .viewport-list__inner {
-            background-color: rgb(229, 229, 229) !important;
-        }
-
-        .avatar {
-            border-radius: 3px !important;
-            // 移除群助手和我的手机icon外圆形
-            &.avatar-sys::before {
-                border-radius: unset !important;
-            }
-        }
-
-        .list-item {
-            height: 65px !important;
-        }
-
-        .list-item__container {
-            background: #00000000 !important;
-        }
-        // 置顶颜色
-        .recent-contact-item.recent-contact-item--top .list-item__container.item-dragging-over {
-            background: #dbdbdb !important;
-        }
-        // 选中颜色
-        .recent-contact-item.recent-contact-item--selected .list-item__container.item-dragging-over {
-            background: rgb(196, 196, 196) !important;
-        }
-
-        // 文字颜色（会员名，普通名，聊天时间，聊天summary）
-        .across-mode.list-item,
-        .across-mode.list-item--selected {
-            .list-item__content {
-                .list-item__title .main-info {
-                    // 普通ID, 会员ID, 群名
-                    span,
-                    .text-ellipsis,
-                    .text-ellipsis.vip-name {
+                .panel-header__title {
+                    font-size: min(var(--font_size_5), 20px);
+                    // 去除vip颜色
+                    #chatHeaderContactName,
+                    .chat-header__contact-name .text-ellipsis {
                         color: black !important;
                         -webkit-text-fill-color: unset !important;
                         background: unset !important;
                     }
                 }
+                .panel-header__action {
+                    .bar-icon:not(:hover) .q-icon {
+                        color: rgb(80, 80, 80);
+                    }
+                }
+            }
 
-                .secondary-info.text-ellipsis span {
-                    color: #999999ff !important;
+            // 聊天框
+            .chat-msg-area {
+                // 聊天头像
+                .message-container__avatar {
+                    border-radius: 2px;
                 }
 
-                .list-item__info .list-item__summary {
-                    color: #999999ff !important;
+                // 文字泡
+                .msg-content-container {
+                    // 商店表情包 小程序背景保持透明
+                    &.container--self:not(:has(.market-face-element, canvas)) {
+                        border-radius: $wechat-text-radius;
+                        background-color: $wechat-green;
+                        color: black;
+                    }
 
+                    &.container--others:not(:has(.market-face-element, canvas)) {
+                        border-radius: $wechat-text-radius;
+                    }
+
+                    // 超链接
+                    .text-element .text-link {
+                        color: rgb(87, 107, 149);
+                    }
+
+                    // at用户
+                    .text-element--at {
+                        color: black;
+                    }
+
+                    // 转发
+                    .forward-msg {
+                        border-radius: $wechat-text-radius;
+                    }
+
+                    // 回复
+                    .reply-element {
+                        color: black;
+                    }
+
+                    // 图片
+                    .image-content {
+                        border-radius: $wechat-text-radius;
+                    }
+                }
+
+                // 语音
+                .ptt-element {
                     .q-icon {
-                        color: #999999ff !important;
+                        color: $wechat-green;
+                    }
+
+                    .ptt-element__duration {
+                        color: black;
                     }
                 }
-            }
-        }
-    }
 
-    // 聊天栏
-    .aio {
-        background: rgb(245, 245, 245) !important;
-        // header
-        .panel-header.chat-header {
-            background: rgb(245, 245, 245) !important;
-
-            .panel-header__title {
-                font-size: min(var(--font_size_5), 20px) !important;
-                // 去除vip颜色
-                #chatHeaderContactName,
-                .chat-header__contact-name .text-ellipsis {
-                    color: black !important;
-                    -webkit-text-fill-color: unset !important;
-                    background: unset !important;
-                }
-            }
-            .panel-header__action {
-                .bar-icon:not(:hover) .q-icon {
-                    color: rgb(80, 80, 80);
-                }
-            }
-        }
-
-        // 聊天框
-        .chat-msg-area {
-            // 聊天头像
-            .message-container__avatar {
-                border-radius: 2px !important;
-            }
-
-            // 文字泡
-            .msg-content-container {
-                // 商店表情包 小程序背景保持透明
-                &.container--self:not(:has(.market-face-element, canvas)) {
-                    border-radius: $wechat-text-radius !important;
-                    background-color: $wechat-green !important;
-                    color: black !important;
+                // 文件
+                .message-container--self.normal-file {
+                    background-color: white;
+                    border-radius: $wechat-text-radius;
+                    color: black;
                 }
 
-                &.container--others:not(:has(.market-face-element, canvas)) {
-                    border-radius: $wechat-text-radius !important;
+                .msg-preview {
+                    border-radius: $wechat-text-radius;
                 }
 
-                // 超链接
-                .text-element .text-link {
-                    color: rgb(87, 107, 149) !important;
+                // 群聊用户名
+                .user-name .text-ellipsis {
+                    color: #999999ff;
                 }
 
-                // at用户
-                .text-element--at {
-                    color: black !important;
-                }
-
-                // 转发
-                .forward-msg {
-                    border-radius: $wechat-text-radius !important;
-                }
-
-                // 回复
-                .reply-element {
-                    color: black !important;
-                }
-
-                // 图片
-                .image-content {
-                    border-radius: $wechat-text-radius !important;
-                }
-            }
-
-            // 语音
-            .ptt-element {
-                .q-icon {
-                    color: $wechat-green !important;
-                }
-
-                .ptt-element__duration {
-                    color: black !important;
-                }
-            }
-
-            // 文件
-            .message-container--self.normal-file {
-                background-color: white !important;
-                border-radius: $wechat-text-radius !important;
-                color: black !important;
-            }
-
-            .msg-preview {
-                border-radius: $wechat-text-radius !important;
-            }
-
-            // 群聊用户名
-            .user-name .text-ellipsis {
-                color: #999999ff !important;
-            }
-
-            // 用户名tag 隐藏等级，保留自定义tag
-            .q-tag {
-                background-color: rgba(26, 173, 25, 0.15);
-                color: rgb(26, 173, 25);
-                .level {
-                    display: none;
-                }
-                &.q-tag--grey {
-                    display: none;
-                }
-            }
-
-            // 群聊时间 撤回通知
-            .message__timestamp,
-            .gray-tip-content {
-                width: fit-content;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                color: white !important;
-
-                background: rgb(218, 218, 218) !important;
-                padding: 3px 5px 2px 5px;
-                border-radius: 2px !important;
-            }
-
-            // 新老消息提示
-            .q-notification {
-                border-radius: 100px !important;
-                box-shadow: 0 2px 4px #0000000f;
-
-                &.theme-default .content {
-                    color: rgb(9, 187, 7) !important;
-                    font-size: 14px;
-                }
-            }
-        }
-
-        // 编辑栏
-        .chat-input-area {
-            // 聊天工具
-            .chat-func-bar {
-                .bar-icon:not(:hover) .q-icon {
-                    color: rgb(80, 80, 80);
-                }
-            }
-            .operation {
-                .send-btn-wrap {
-                    background-color: rgb(233, 233, 233) !important;
-                    .send-setting i.q-icon {
-                        color: rgb(7, 193, 96);
+                // 用户名tag 隐藏等级，保留自定义tag
+                .q-tag {
+                    background-color: rgba(26, 173, 25, 0.15);
+                    color: rgb(26, 173, 25);
+                    .level {
+                        display: none;
                     }
-                    .send {
-                        width: 100px;
-                    }
-                    .divider,
-                    .send-setting__wrapper {
+                    &.q-tag--grey {
                         display: none;
                     }
                 }
 
-                .send--disabled {
-                    opacity: 1;
+                // 群聊时间 撤回通知
+                .message__timestamp,
+                .gray-tip-content {
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+                    color: white;
+
+                    background: rgb(218, 218, 218);
+                    padding: 3px 5px 2px 5px;
+                    border-radius: 2px;
                 }
 
-                .send {
-                    font-size: 1.25em !important;
-                    color: rgb(7, 193, 96) !important;
-                }
+                // 新老消息提示
+                .q-notification {
+                    border-radius: 100px;
+                    box-shadow: 0 2px 4px #0000000f;
 
-                .close {
-                    display: none !important;
+                    &.theme-default .content {
+                        color: rgb(9, 187, 7);
+                        font-size: 14px;
+                    }
                 }
             }
 
-            // 表情popup
-            .sticker-panel {
-                border-radius: 0 !important;
-                background: rgb(247, 247, 247) !important;
+            // 编辑栏
+            .chat-input-area {
+                // 聊天工具
+                .chat-func-bar {
+                    .bar-icon:not(:hover) .q-icon {
+                        color: rgb(80, 80, 80);
+                    }
+                }
+                .operation {
+                    .send-btn-wrap {
+                        background-color: rgb(233, 233, 233);
+                        .send-setting i.q-icon {
+                            color: rgb(7, 193, 96);
+                        }
+                        .send {
+                            width: 100px;
+                        }
+                        .divider,
+                        .send-setting__wrapper {
+                            display: none;
+                        }
+                    }
+
+                    .send--disabled {
+                        opacity: 1;
+                    }
+
+                    .send {
+                        font-size: 1.25em;
+                        color: rgb(7, 193, 96);
+                    }
+
+                    .close {
+                        display: none;
+                    }
+                }
+
+                // 表情popup
+                .sticker-panel {
+                    border-radius: 0;
+                    background: rgb(247, 247, 247);
+                }
+            }
+
+            // 右栏 群成员和群公告
+            .group-box {
+                .group-notice .content {
+                    color: black;
+                }
+
+                .group-user__name.text-ellipsis {
+                    color: black;
+                }
+
+                .group-user {
+                    .avatar {
+                        border-radius: unset;
+                    }
+                    .q-tag.q-tag--blue {
+                        color: rgb(26, 173, 25);
+                        background-color: rgba(26, 173, 25, 0.15);
+                    }
+                }
+            }
+
+            // 右栏 信息设定
+            .side-panel .more-panel {
+                .input-field .input-container,
+                .q-list,
+                .q-pulldown-menu,
+                .q-pulldown-menu-button,
+                .q-button {
+                    border-radius: 2px;
+                }
             }
         }
 
-        // 右栏 群成员和群公告
-        .group-box {
-            .group-notice .content {
-                color: black !important;
-            }
+        // 其他
+        .q-popover {
+            background-color: white;
+            border-radius: 3px;
+            box-shadow: 0 0 6px 3px #0000000f;
 
-            .group-user__name.text-ellipsis {
-                color: black !important;
-            }
+            .buddy-profile {
+                background-image: unset;
 
-            .group-user {
                 .avatar {
-                    border-radius: unset !important;
+                    border-radius: 5px;
                 }
-                .q-tag.q-tag--blue {
-                    color: rgb(26, 173, 25);
-                    background-color: rgba(26, 173, 25, 0.15);
+
+                .circle-button {
+                    border-radius: 5px;
                 }
             }
         }
-
-        // 右栏 信息设定
-        .side-panel .more-panel {
-            .input-field .input-container,
-            .q-list,
-            .q-pulldown-menu,
-            .q-pulldown-menu-button,
-            .q-button {
-                border-radius: 2px !important;
-            }
+        [role="button"] {
+            cursor: pointer;
         }
-    }
 
-    // 其他
-    .q-popover {
-        background-color: white !important;
-        border-radius: 3px !important;
-        box-shadow: 0 0 6px 3px #0000000f;
-
-        .buddy-profile {
-            background-image: unset !important;
+        // 联系人栏目
+        .contact {
+            background-color: rgb(247, 247, 247);
 
             .avatar {
-                border-radius: 5px !important;
+                border-radius: 2px;
+
+                &.avatar-sys::before {
+                    border-radius: unset;
+                }
             }
 
-            .circle-button {
-                border-radius: 5px !important;
+            .avatar--offline::after {
+                border-radius: unset;
+            }
+
+            .tab-header,
+            .q-collapse-item__header {
+                background-color: rgb(247, 247, 247);
+            }
+
+            // 选中颜色
+            .viewport-list__inner .across-mode.list-item--selected {
+                background: rgb(196, 196, 196);
+
+                .list-item__content .list-item__title span {
+                    color: black;
+                }
             }
         }
-    }
-    [role="button"] {
-        cursor: pointer;
-    }
 
-    // 联系人栏目
-    .contact {
-        background-color: rgb(247, 247, 247) !important;
-
-        .avatar {
-            border-radius: 2px !important;
-
-            &.avatar-sys::before {
-                border-radius: unset !important;
-            }
-        }
-
-        .avatar--offline::after {
-            border-radius: unset !important;
-        }
-
-        .tab-header,
-        .q-collapse-item__header {
-            background-color: rgb(247, 247, 247) !important;
-        }
-
-        // 选中颜色
-        .viewport-list__inner .across-mode.list-item--selected {
-            background: rgb(196, 196, 196) !important;
-
-            .list-item__content .list-item__title span {
-                color: black !important;
-            }
+        // 右上角按钮
+        .window-control-area > div {
+            color: rgb(80, 80, 80);
         }
     }
 
     // 右键菜单高亮回复和撤回
+    .q-context-menu {
+        border-radius: 0 !important;
+    }
     .q-context-menu-item {
         &:has(.q-icon path[d^="M6.00031"], .q-icon use[*|href$="quote_24"]) {
             color: green;
@@ -380,10 +390,5 @@
         &:has(.q-icon path[d^="M2.14649"], .q-icon use[*|href$="recall_24"]) {
             color: red;
         }
-    }
-
-    // 右上角按钮
-    .window-control-area > div {
-        color: rgb(80, 80, 80);
     }
 }
