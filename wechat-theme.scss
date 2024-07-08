@@ -117,7 +117,7 @@
                 background: rgb(245, 245, 245);
 
                 .panel-header__title {
-                    font-size: min(var(--font_size_5), 20px);
+                    font-size: min(var(--font_size_5), 20px) !important;
                     // 去除vip颜色
                     #chatHeaderContactName,
                     .chat-header__contact-name .text-ellipsis {
@@ -180,11 +180,13 @@
                 }
 
                 // 语音
-                .ptt-element {
-                    .q-icon {
-                        color: $wechat-green;
+                .container--self {
+                    .ptt-element__button .q-icon {
+                        --bubble_host: #444444;
                     }
-
+                    .ptt-element__progress-item {
+                        background-color: #444444;
+                    }
                     .ptt-element__duration {
                         color: black;
                     }
