@@ -69,6 +69,10 @@
 
             .list-item__container {
                 background: #00000000;
+                // 通话时头像
+                .recent-contact-item__phone .recent-contact-item__phone_bg {
+                    border-radius: unset;
+                }
             }
             // 置顶颜色
             .recent-contact-item.recent-contact-item--top .list-item__container.item-dragging-over {
@@ -223,6 +227,10 @@
                 // 群聊时间 撤回通知
                 .message__timestamp,
                 .gray-tip-content {
+                    .babble {
+                        padding: 0;
+                        background-color: unset;
+                    }
                     width: fit-content;
                     margin-left: auto;
                     margin-right: auto;
